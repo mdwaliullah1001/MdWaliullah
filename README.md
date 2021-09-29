@@ -1,2 +1,2 @@
 # MdWaliullah
-This is my resume website
+This responsive website is for free and open source.
