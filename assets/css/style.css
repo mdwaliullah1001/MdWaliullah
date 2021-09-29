@@ -1,0 +1,1062 @@
+/* #######################################
+############ global settings ##############
+######################################## */
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    outline: none;
+}
+html{
+   scroll-behavior: smooth; 
+}
+body{
+    color: #ffffff;
+    background-image: url('../img/body_background.jpg'); /* you can use this =======  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), */
+    background-position: center;
+    background-color: rgb(8, 2, 2);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+::-webkit-scrollbar{
+    
+}
+
+section{
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    backdrop-filter: blur(1rem);
+    background:rgba(255,255,255,.2);
+    margin-bottom: 1rem;
+}
+
+
+
+/***** NAVBAR DESHIN STARTS ************************/
+/*****************************/
+
+.header{
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 2rem;
+    background:rgba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    backdrop-filter: blur(1rem);
+    height: 100%;
+    z-index: 999999;
+}
+
+
+
+.user_details h4{
+    margin-top: 1rem;
+}
+.user_details > p{
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.user_details img{
+    height:70%;
+    width:70%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 .4rem rgba(255,255,255,.3);
+}
+
+
+.my_nav ul li a{
+    text-decoration: none;
+    font-size: medium;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    transition: .3s linear;
+    text-transform: capitalize;
+}
+.my_nav ul li{
+    list-style-type: none;
+   /* background-color:rgba(0, 0, 0, 0.3); */
+    padding: .5rem;
+    transition: .3s linear;
+    margin-top: .1rem;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.7);
+}
+
+.my_nav ul li:hover{
+    background: rgba(0, 0, 0, 0.6);
+  
+}
+.my_nav ul li:hover a{
+    background-image: linear-gradient(to right,  #fff, #0000, #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    
+    background-size: 300%;
+    background-position: -100%;  
+    
+    animation: animatedText 2s infinite alternate-reverse;
+}
+
+.my_nav ul li:hover .arrow_icon{
+    visibility: visible;
+    transition: .3s linear;
+    animation-name: arrowanim;
+    animation-duration: .7s;
+}
+
+@keyframes arrowanim {
+    form{
+        transform: translateX(0);
+    }
+    to{
+       transform: translateX(5rem);
+    }
+}
+
+.arrow_icon{
+    transition: .3s linear;
+    visibility: hidden;
+}
+
+
+
+
+
+/********************* TEXT ANIMATION *****************/
+.text{
+    text-transform: uppercase; 
+    background-image: linear-gradient(to right, #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    
+    background-size: 300%;
+    background-position: -100%;  
+    
+    animation: animatedText 4s infinite alternate-reverse;
+  }
+  
+  @keyframes animatedText{
+    to{
+      background-position: 100%; 
+    }
+  }
+  /********************************
+  *********** NAVBAR ENDS ********
+  ********************************/
+
+
+
+
+
+.main_section{
+    margin-left: 18rem;
+    margin-right: 1rem;
+}
+
+
+
+
+
+/*************************************
+     home section stats
+*************************************/
+.home{
+    overflow: hidden;
+    position: relative;
+    padding: 8rem 0 7rem 6rem;
+}
+
+
+.headInd{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size:60px;
+    letter-spacing: 3px;
+    line-height: 90px;
+    text-transform: capitalize;
+}
+
+.hi{
+    /* for text lighting */
+    background-image: linear-gradient(to right, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    background-size: 400%;
+    background-position: -100%;  
+    animation: animatedText 5s infinite alternate-reverse;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+
+
+
+/* animated button */
+
+.buttoN{
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+    transition: .3s linear;
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid #fff;
+}
+.buttoN:hover{
+    background-color: rgb(31, 28, 28);
+    border: 1px solid transparent;
+}
+.butt{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: .8rem 2rem;
+    font-size: 14px;;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.buttoN:hover .butt{
+    text-decoration: none;
+    background-image: linear-gradient(to right, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    background-size: 400%;
+    background-position: -100%;  
+    animation: animatedText 2s infinite alternate-reverse;
+}
+
+.buttoN::before{
+    content: "";
+    position: absolute;
+    top:-3px;
+    left:-3px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 0;
+    background-size: 400% !important;
+    z-index: -3;
+    transition: opacity .3s ease-in-out;
+    border-radius: 2px;
+    background: linear-gradient(45deg, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c, #ff7300, #fffb00, #48ff00);
+    animation: borderAnim 10s linear infinite;
+}
+.buttoN::after{
+    content: "";
+    position: absolute;
+    bottom:-3px;
+    right:-3px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 0;
+    background-size: 400% !important;
+    z-index: -3;
+    transition: opacity .3s ease-in-out;
+    border-radius: 2px;
+    background: linear-gradient(45deg, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c, #ff7300, #fffb00, #48ff00);
+    animation: borderAnim 20s linear infinite;
+}
+
+@keyframes borderAnim{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.buttoN:hover:before{
+    opacity: 1;
+}
+.buttoN:hover:after{
+    opacity: 1;
+}
+
+/* secend animated button */
+
+
+.buttoM{
+    background-color: rgba(0, 0, 0, 1);
+    margin-top: 3rem;
+    transition: .3s linear;
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.buttoM:hover{
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.but{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: .8rem 3rem;
+    font-size: 14px;;
+    background-image: linear-gradient(to right, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    background-size: 400%;
+    background-position: -100%;  
+    animation: animatedText 2s infinite alternate-reverse;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.buttoM:hover .but{
+    color:#fff;
+    text-decoration: none;
+}
+
+.buttoM::before{
+    content: "";
+    position: absolute;
+    top:-3px;
+    left:-3px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 1;
+    background-size: 400% !important;
+    z-index: -3;
+    transition: opacity .3s ease-in-out;
+    border-radius: 2px;
+    background: linear-gradient(45deg, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c, #ff7300, #fffb00, #48ff00);
+    animation: borderAnim 10s linear infinite;
+}
+.buttoM::after{
+    content: "";
+    position: absolute;
+    bottom:-3px;
+    right:-3px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 1;
+    background-size: 400% !important;
+    z-index: -3;
+    transition: opacity .3s ease-in-out;
+    border-radius: 2px;
+    background: linear-gradient(45deg, #0000, #fff, rgb(159, 184, 159), #00F260, #f79d00, #0575E6, #64f38c, #ff7300, #fffb00, #48ff00);
+    animation: borderAnim 20s linear infinite;
+}
+
+.buttoM:hover:before{
+    opacity: 0;
+}
+.buttoM:hover:after{
+    opacity: 0;
+}
+
+
+
+
+
+/*********************************************
+****** virtical social media icons ***********
+*********************************************/
+.vNav{
+    position: absolute;
+    right: 0;
+    top: 12rem;
+
+}
+
+.vNav li{
+    width: 8.5rem;
+    list-style-type: none;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.7);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-bottom: .5rem;
+    transform: translate(6rem, 0);
+    transition: all .3s linear;
+    padding: .3rem;
+}
+
+.vNav li:hover{
+    transform: translate(0, 0);
+}
+
+.vNav li:hover i{
+    transform: rotate(360deg);
+}
+
+.vNav li a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    padding: .1rem 0;
+    text-align: left;
+    align-items: center;
+    border-top-left-radius:2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.vNav li a i{
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.5);
+    border-radius: 50%;
+    padding: .5rem;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 15px;
+    transition: all 1s;
+}
+
+.vNav li a span{
+    margin-left: 1rem;
+}
+
+
+.vNav li:nth-child(1):hover a{
+    background: #1DA1F2;
+  }
+.vNav li:nth-child(2):hover a{
+    background: #E1306C;
+  }
+.vNav li:nth-child(3):hover a{
+    background: #2867B2;
+  }
+.vNav li:nth-child(4):hover a{
+    background: #333;
+  }
+.vNav li:nth-child(5):hover a{
+    background: #ff0000;
+  }
+/*************************************
+     home section ends
+*************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /**********************************
+        resume section stats
+***********************************/
+.resume{
+    padding: 5rem;
+}
+.heaDing{
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.heaDing > span{
+    display: inline-block;
+    background: #000000;
+    padding: .5rem  1rem;
+    font-size: x-large;
+}
+
+
+
+
+
+.button_container{
+    margin-top: 2rem;
+    display: flex;
+}
+.button_D{
+    width: 13rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,1);
+    margin-right: .6rem;
+}
+.button_D > a{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    width: 12.3rem;
+    height: 2.3rem;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.7);
+    color: #fff;
+   
+    transition: all .4s linear;
+}
+
+.button_D > a:hover{
+    background: #000000;
+    transform: scale(.9);
+}
+
+
+
+ /**********************************
+        resume section ends
+***********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************
+     project section starts 
+*********************************/
+.projects{
+    padding: 5rem;
+
+}
+
+
+.gallery-item-inner img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+/*.gallery*/
+.gallery{
+	width: 100%;
+	display: block;
+	min-height: 100%;
+	border: none;
+	padding: 1rem 0;
+}
+.gallery .gallery-filter{
+	padding: 0 15px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.gallery .gallery-filter .filter-item{
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin:0 10px;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	line-height: 1.2;
+	transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+	color: #000000;
+	border-color : #000000;
+}
+
+.gallery .gallery-item{
+	width: 30%;
+    margin: .3rem;
+	padding: 15px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.7);
+}
+.gallery .gallery-item-inner img{
+	width: 100%;
+    transition: all .3s linear;
+}
+.gallery .gallery-item-inner img:hover{
+	transform: scale(1.2);
+    cursor: pointer;
+}
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gallery .gallery-item.hide{
+	display: none;
+}
+
+
+
+/*********************************
+     project section ends 
+*********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************
+    skill section starts
+*******************************/
+.skill{
+    padding: 5rem;
+}
+
+
+
+
+.containeR, .containeRR{
+    position: relative;
+}
+
+.containeR, .containeRR h3{
+    color: #fff;
+}
+.skills{
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,1);
+    transition: 0.5s;
+    border-radius: .5rem;
+}
+
+.responsive{
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+
+
+.skills .name{
+    position: relative;
+    width: 100px;
+    text-align: right;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.skills .value{
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.skills .percent{
+    position: relative;
+    width: calc(100% - 100px);
+    margin-top: 5px !important;
+    height: 13px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;   
+}
+
+.skills .percent .progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow:  inset 0 0 2px #000;
+    animation: animationTO 4s ease-in-out forwards;
+}
+
+@keyframes animationTO{
+    from{
+        width: 0;
+    }
+}
+
+/* first div */
+.containeR  .skills:nth-child(2) .percent .progress{
+    background:  linear-gradient(45deg, #1fe6ff, #673AB7);
+}
+
+.containeR .skills:nth-child(3) .percent .progress{
+    background:  linear-gradient(45deg, #a31a91, #972f06);
+}
+
+.containeR .skills:nth-child(4) .percent .progress{
+    background:  linear-gradient(45deg, #25da15, #e00b0b);
+}
+
+.containeR .skills:nth-child(5) .percent .progress{
+    background:  linear-gradient(45deg, #c7e70d, #d50ef0);
+}
+
+
+.skills:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+/* secend div */
+
+.containeRR  .skills:nth-child(2) .percent .progress{
+    background:  linear-gradient(45deg, #e0d310, #0730a3);
+}
+
+.containeRR .skills:nth-child(3) .percent .progress{
+    background:  linear-gradient(45deg, #7a36c98a, #fa7676);
+}
+
+.containeRR .skills:nth-child(4) .percent .progress{
+    background:  linear-gradient(45deg, #b5f069, #735a9c);
+}
+
+.containeRR .skills:nth-child(5) .percent .progress{
+    background:  linear-gradient(45deg, #0eb5df, #75864d);
+}
+
+
+
+
+/* 3rd div */
+.containeRRR  .skills:nth-child(2) .percent .progress{
+    background:  linear-gradient(45deg, #e209a1, #022f69);
+}
+
+.containeRRR .skills:nth-child(3) .percent .progress{
+    background:  linear-gradient(45deg, #ce69ec, #d0f30d);
+}
+
+.containeRRR .skills:nth-child(4) .percent .progress{
+    background:  linear-gradient(45deg, #1106a8, #0be00b);
+}
+
+/*******************************
+    skill section ends
+*******************************/
+
+
+
+
+/******************************
+    contact section stats here
+******************************/
+.contact_body{
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,1);
+    padding: 2rem;
+    border-radius: .2rem;
+}
+
+.col-for-conR,
+.col-for-con{
+    width: 50%;
+}
+
+.contact_body span{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.contact_body input, textarea{
+    background: transparent;
+    display: block;
+    width: 100%;
+    color: #fff;
+    border: none;
+    box-shadow: inset 0 0 10px #000;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+::-webkit-input-placeholder{
+    color: #afb8b7;
+}
+
+.fullName, .email_enter, .text_aria{
+    margin: 1rem;
+}
+
+.contact_body button{
+    border: none;
+    background: #000000;
+    color: #fff;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    text-transform: capitalize;
+}
+
+
+.contact_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.con{
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,1);
+    padding: .6rem .65rem;
+    border-radius: 5rem;
+}
+.inFo a{
+    color: #fff;
+    display: block;
+    margin-top: .8rem;
+}
+
+
+
+/******************************
+    contact section ends here
+******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************
+    media query for responsive website
+***************/
+@media (max-width:1200px){
+    .home{
+        padding-top: 5rem;
+        padding-left: 3rem;
+    }
+    .resume, .projects, .skill{
+        padding: 3rem;
+    }
+
+
+    .headInd{
+        letter-spacing: 2px;
+    }
+   
+}
+
+@media (max-width:1100px){
+    .gallery .gallery-item{
+		width: 48%;
+	}
+
+    .responsive{
+        width: 48%;
+    }
+    .contact_body input, textarea{
+        padding: .2rem .5rem;
+    }
+    .contact_body{
+        padding: 1rem;
+    }
+    .col-for-conR{
+        width: 57%;
+    }
+    .col-for-con{
+        width: 43%;
+    }
+
+
+}
+
+@media (max-width:991px){
+    .header{
+        display: none;
+    }
+    .menu-btn{
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 9;
+    }
+    .main_section{
+        margin-left: 1rem;
+        margin-top: 1rem;
+        position: relative;
+    }
+    .col-for-conR{
+        width: 50%;
+    }
+    .col-for-con{
+        width: 50%;
+    }
+}
+
+@media (max-width:768px){
+    .headInd{
+        font-size:50px;
+        letter-spacing: 2px;
+        line-height: 70px;
+    }
+    .butt{
+        padding: .7rem 1rem;
+        font-size: 12px;
+    }
+    .but{
+        padding: .7rem 2rem;
+        font-size: 12px;
+    }
+    .buttoN, .buttoM{
+        margin-top: 2rem;
+    }
+    .vNav{
+        position: absolute;
+        right: 0;
+        top: 9.5rem;
+    }
+    .heaDing > span{
+        font-size: large;
+    }
+    .button_D{
+        width: 10rem;
+        height: 2.7rem;
+        margin-right: .6rem;
+    }
+    .button_D > a{
+        width: 9.3rem;
+        height: 2rem;
+        font-size: 14px;
+    }
+    
+
+}
+
+@media (max-width:614px){
+    .headInd{
+        font-size:40px;
+        line-height: 60px;
+    }
+    .home p{
+        font-size: 13px;
+    }
+    
+    .home{
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+    }
+    .resume, .projects, .skill{
+        padding: 2rem;
+    }
+
+    .vNav{
+        top: 7rem;
+    
+    }
+    .gallery .gallery-item{
+		width: 100%;
+	}
+    
+    .col-for-conR{
+        width: 100%;
+
+    }
+    .col-for-con{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .responsive{
+        width: 98%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    .button_D{
+        width: 8rem;
+        height: 1.7rem;
+        margin-right: .6rem;
+    }
+    .button_D > a{
+        width: 7.5rem;
+        height: 1.3rem;
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width:400px){
+   	
+	.gallery .gallery-filter .filter-item{
+		margin-bottom: 10px;
+	}
+
+    .responsive{
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .headInd{
+        font-size:40px;
+        letter-spacing: 1px;
+        line-height: 55px;
+    }
+    .butt{
+        padding: .4rem .5rem;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+    .but{
+        padding: .4rem 1.2rem;
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-left: 3px;
+    }
+    .buttoN, .buttoM{
+        margin-top: 1.5rem;
+    }
+
+ }
+
+
+
+
+
+
